@@ -17,7 +17,7 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v4
     - name: Publish Release Note
-      uses: "."
+      uses: "./"
       with:
         notion_integration_secret: ${{ secrets.SAMPLE_NOTION_INTEGRATION_SECRET }}
         parent_database_id: ${{ env.SAMPLE_NOTION_DATABASE_ID }}
