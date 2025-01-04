@@ -3,6 +3,10 @@ name: Test
 on:
   workflow_dispatch:
 
+env:
+  # Use github.ref_name for publish events
+  REF_NAME: "0.0.0-test"
+
 jobs:
   publish:
     runs-on: ubuntu-latest
@@ -18,5 +22,7 @@ jobs:
             名前:
               title:
                 - text:
-                    content: ${{ github.repository }}
-          github_ref_name: "0.0.0-sample"
+                    content: "${{ env.REF_NAME }}"
+            "GitHub Release":
+              url: "https://github.com/utisam/github-release-notion/releases/tag/${{ env.REF_NAME }}"
+          github_ref_name: "${{ env.REF_NAME }}"
