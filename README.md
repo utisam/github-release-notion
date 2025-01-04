@@ -1,4 +1,4 @@
-# GitHub Release Notion
+# Notion Release Note
 
 Publish release notes to Notion.
 
