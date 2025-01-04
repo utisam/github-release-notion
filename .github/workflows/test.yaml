@@ -7,16 +7,16 @@ jobs:
   publish:
     runs-on: ubuntu-latest
     steps:
-    - name: Checkout
-      uses: actions/checkout@v4
-    - name: Publish Release Note
-      uses: "./"
-      with:
-        notion_integration_secret: ${{ secrets.SAMPLE_NOTION_INTEGRATION_SECRET }}
-        parent_database_id: ${{ env.SAMPLE_NOTION_DATABASE_ID }}
-        properties: |
-          名前:
-            title:
-              - text:
-                  content: ${{ github.repository }}
-        github_ref_name: "0.0.0-sample"
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Publish Release Note
+        uses: "./"
+        with:
+          notion_integration_secret: ${{ secrets.SAMPLE_NOTION_INTEGRATION_SECRET }}
+          parent_database_id: ${{ vars.SAMPLE_NOTION_DATABASE_ID }}
+          properties: |
+            名前:
+              title:
+                - text:
+                    content: ${{ github.repository }}
+          github_ref_name: "0.0.0-sample"
