@@ -1,0 +1,7 @@
+{
+  "rootDir": "src",
+  "testEnvironment": "jest-environment-node",
+  "transform": {
+    "^.+\\.(t|j)sx?$": "@swc/jest"
+  }
+}

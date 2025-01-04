@@ -1,0 +1,31 @@
+name: "Notion Release Note"
+description: "Transfer release note to notion database"
+author: "utisam"
+inputs:
+  github_token:
+    description: "Custom token to read release message. GITHUB_TOKEN is used at default."
+    required: false
+    default: ${{ github.token }}
+  notion_integration_secret:
+    description: "Integration secret of notion"
+    required: true
+  parent_database_id:
+    description: "Notion database ID to add release note"
+    required: true
+  properties:
+    description: "Properties to add to notion database"
+    required: true
+  github_ref_name:
+    description: "Tag of release to send. GITHUB_REF_NAME is used at default."
+    required: false
+    default: ${{ github.ref_name }}
+  github_repository:
+    description: "Repository of release to send. GITHUB_REPOSITORY is used at default."
+    required: false
+    default: ${{ github.repository }}
+runs:
+  using: "node20"
+  main: "dist/index.js"
+branding:
+  color: "green"
+  icon: "package"
