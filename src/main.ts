@@ -23,6 +23,7 @@ async function getRelease(octokit: Octokit, config: Config) {
 }
 
 export interface Output {
+  id?: string;
   url?: string;
 }
 
@@ -43,7 +44,10 @@ async function main(config: Config): Promise<Output> {
   if (!("url" in result)) {
     return {};
   }
-  return { url: result.url };
+  return {
+    id: result.id,
+    url: result.url,
+  };
 }
 
 export default main;

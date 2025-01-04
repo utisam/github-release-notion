@@ -22,7 +22,10 @@ const config = (() => {
 
 try {
   const result = await main(config);
-  core.setOutput("url", result.url);
+  core.info(`id: ${result.id}`);
+  core.info(`url: ${result.url}`);
+  core.setOutput("id", result.id ?? "");
+  core.setOutput("url", result.url ?? "");
 } catch (e) {
   const message = e instanceof Error ? e.message : e;
   core.error(`❌ Failed to transfer: ${message}`);
