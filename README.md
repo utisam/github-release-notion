@@ -15,7 +15,7 @@ jobs:
   release:
     steps:
       - name: Publish Release Note
-        uses: utisam/github-release-notion
+        uses: utisam/github-release-notion@v1
         with:
           notion_integration_secret: ${{ secrets.NOTION_INTEGRATION_SECRET }}
           parent_database_id: ${{ vars.NOTION_DATABASE_ID }}
