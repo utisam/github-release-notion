@@ -21,7 +21,7 @@ describe("parseConfig", () => {
         propertiesYaml: "properties: {}",
         refName: "1.0.0",
         repository: "owner/repo",
-        notionIntegrationSecret: ""
+        notionIntegrationSecret: "",
       }),
     ).toThrow("No notion_integration_secret");
   });
@@ -34,7 +34,7 @@ describe("parseConfig", () => {
         propertiesYaml: "properties: {}",
         refName: "1.0.0",
         repository: "owner/repo",
-        parentDatabaseId: ""
+        parentDatabaseId: "",
       }),
     ).toThrow("No parent_database_id");
   });
@@ -108,15 +108,15 @@ describe("parseConfig", () => {
       owner: "owner",
       parentDatabaseId: "databaseId",
       properties: {
-        "Name": {
-          "title": [
+        Name: {
+          title: [
             {
-              "text": {
-                "content": "Name",
+              text: {
+                content: "Name",
               },
             },
           ],
-        }
+        },
       },
       refName: "1.0.0",
       repositoryName: "repo",
