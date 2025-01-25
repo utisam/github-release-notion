@@ -1,5 +1,5 @@
-import { parse } from "yaml";
 import type { CreatePageParameters } from "@notionhq/client/build/src/api-endpoints";
+import { parse } from "yaml";
 
 type NotionProperties = CreatePageParameters["properties"];
 

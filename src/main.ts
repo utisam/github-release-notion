@@ -1,9 +1,9 @@
 import * as github from "@actions/github";
-import type { Config } from "./config";
 import type { GitHub } from "@actions/github/lib/utils";
-import { RequestError } from "@octokit/request-error";
 import { Client as NotionClient } from "@notionhq/client";
+import { RequestError } from "@octokit/request-error";
 import { markdownToBlocks } from "@utisam/marton";
+import type { Config } from "./config";
 
 type Octokit = InstanceType<typeof GitHub>;
 
