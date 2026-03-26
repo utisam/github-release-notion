@@ -27,6 +27,6 @@
     "@notionhq/client": "^2.2.11",
     "@tryfabric/martian": "^1.2.4",
     "@utisam/marton": "^0.1.1",
-    "yaml": "^2.7.0"
+    "yaml": "^2.8.3"
   }
 }
